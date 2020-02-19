@@ -30,26 +30,6 @@ var passwordProtect = function(func, password) {
   }
 }
 
-/*var passwordProtect = function(func, password) {
-  debugger;
-  console.log(arguments);
-  // YOUR CODE HERE
-  return function() {
-    debugger;
-    console.log(password);
-    console.log(arguments);
-    console.log(arguments[0]);
-    console.log(arguments[1]);
-    console.log(arguments[2]);
-    let value;
-    if(arguments[0] === password) {
-      value = func(arguments[1], arguments[2]);
-      console.log(value);
-      return value;
-    }
-  }
-};*/
-
 var protectedMyFunc = passwordProtect(myFunc, 'p@ssw0rd');
 
 console.log(protectedMyFunc('password', 1, 2)); // nothing logged, nothing returned
